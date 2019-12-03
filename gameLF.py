@@ -9,11 +9,13 @@ def scrabble_score(word):
     word = word.lower()
     total = 0
     for letter in word:
-        for leter in score:
-            if letter == leter:
-                total = total + score[leter]
+        for puzzle in score:
+            if letter == puzzle:
+                total = total + score[puzzle]
     return total
 
+print("what is your word?")
+phrase = input()
 
-print scrabble_score("pizza")
-print()
+
+print ("Congrats! Your score is", (scrabble_score(phrase)))
